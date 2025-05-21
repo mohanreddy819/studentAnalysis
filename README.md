@@ -17,6 +17,6 @@ cd studentAnalysis
      pip install -r requirements.txt
    ```
 ### Run the Project
-'''bash
+```bash
   python app.py
-'''
+```
