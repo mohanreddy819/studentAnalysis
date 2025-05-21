@@ -4,11 +4,10 @@
 {% block head_extra %}
     <link rel="stylesheet" href="/static/css/check.css"> {# Adjust path if needed #}
      <style>
-        /* Keep styles from original, adjust paths */
         body {
             font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex;
             flex-direction: column; min-height: 100vh;
-            background-image: url("/static/images/check.jpeg"); /* Adjusted path */
+            background-image: url("/static/images/check.jpeg");
             background-size: cover; background-position: center; background-repeat: no-repeat;
         }
          header { background-color: #333; color: white; display: flex; align-items: center;
@@ -23,33 +22,33 @@
          .sidebar ul li { text-align: left; }
          .sidebar ul li a { padding: 15px 20px; text-decoration: none; color: white; display: block; white-space: nowrap;}
          .sidebar ul li a:hover { background-color: #575757; }
-        .main-content { margin-left: 60px; padding: 40px 20px; /* More padding */ flex: 1;
+        .main-content { margin-left: 60px; padding: 40px 20px;  flex: 1;
                         overflow-x: hidden; transition: margin-left 0.2s;
-                        display: flex; justify-content: center; align-items: flex-start; /* Center content */
+                        display: flex; justify-content: center; align-items: flex-start;
                       }
         .sidebar:hover ~ .main-content { margin-left: 200px; }
 
         .button-container {
-            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+            background-color: rgba(255, 255, 255, 0.85); 
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            align-items: stretch; /* Make items take full width */
-            gap: 20px; /* Space between elements */
+            flex-direction: column; 
+            align-items: stretch;
+            gap: 20px;
             width: 100%;
-            max-width: 600px; /* Limit container width */
+            max-width: 600px;
         }
         .button-container form div {
              display: flex;
-             flex-direction: column; /* Label above input */
+             flex-direction: column;
              gap: 10px;
              align-items: stretch;
         }
         .button-container label {
             font-weight: bold;
-            margin-bottom: 5px; /* Space below label */
+            margin-bottom: 5px; 
             color: #333;
         }
         .button-container input[type="text"] {
@@ -57,11 +56,11 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 1rem;
-            width: 100%; /* Take full width */
+            width: 100%; 
             box-sizing: border-box;
         }
-         .button { /* Style for both buttons and links acting as buttons */
-             background-color: #5cb85c; /* Green */
+         .button { 
+             background-color: #5cb85c; 
              color: white;
              padding: 12px 20px;
              border: none;
@@ -77,22 +76,22 @@
          .button:hover {
              background-color: #4cae4c;
          }
-         .button-container form button { margin-top: 10px;} /* Space above Check USN button */
+         .button-container form button { margin-top: 10px;} 
 
-        .action-buttons { /* Container for the lower buttons */
+        .action-buttons { 
              display: flex;
-             justify-content: space-around; /* Distribute buttons */
-             flex-wrap: wrap; /* Allow wrapping on small screens */
+             justify-content: space-around; 
+             flex-wrap: wrap;
              gap: 10px;
         }
         .action-buttons .button {
-             flex-grow: 1; /* Allow buttons to grow */
-             min-width: 120px; /* Minimum width */
+             flex-grow: 1;
+             min-width: 120px; 
          }
 
          footer { background-color: #333; color: white; text-align: center;
                   padding: 10px; margin-top: auto; }
-        /* Hide text when sidebar is collapsed */
+      
         .sidebar:not(:hover) ul li a span { display: none; }
         .sidebar ul li a i { margin-right: 10px; width: 20px; text-align: center; }
     </style>
