@@ -1,3 +1,5 @@
+# studentAnalysis
+
 ## Installation
 Clone the Repository by 
 ```bash
@@ -14,3 +16,7 @@ cd studentAnalysis
    ```bash
      pip install -r requirements.txt
    ```
+### Run the Project
+'''bash
+  python app.py
+'''
