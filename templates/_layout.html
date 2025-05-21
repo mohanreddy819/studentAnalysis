@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Student Grade Analysis{% endblock %}</title>
+    <!-- Link to your main CSS file if you have one -->
+    <!-- <link rel="stylesheet" href="/static/css/main.css"> -->
+    {% block head_extra %}{% endblock %} {# For page-specific styles/scripts #}
+    <style>
+        /* Basic styling for flash messages */
+        .flash-messages { list-style: none; padding: 0; margin: 1em 0; }
+        .flash-messages li { margin-bottom: 0.5em; padding: 0.8em; border-radius: 4px; }
+        .flash-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .flash-error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .flash-info { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .flash-warning { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+    </style>
+</head>
+<body>
+    {# Display flashed messages #}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flash-messages">
+            {% for category, message in messages %}
+                <li class="flash-{{ category }}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <div class="content">
+        {% block content %}{% endblock %} {# Main content of each page #}
+    </div>
+
+    {% block scripts_extra %}{% endblock %} {# For page-specific scripts #}
+</body>
+</html>

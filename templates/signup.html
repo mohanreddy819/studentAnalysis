@@ -1,0 +1,37 @@
+{% extends "_layout.html" %} {# Optional: Use layout for flash messages #}
+{% block title %}Sign Up{% endblock %}
+
+{% block head_extra %}
+    <link rel="stylesheet" href="/static/css/signup.css"> {# Adjust path if needed #}
+{% endblock %}
+
+{% block content %}
+<div class="signup-container">
+    <h3>Sign-Up</h3>
+    <form action="/signup" method="POST"> {# Use direct path #}
+         {# Flash messages will be displayed by the layout template #}
+
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username" required placeholder="Enter Username"><br><br>
+
+        <label for="firstname">First Name</label><br>
+        <input type="text" id="firstname" name="firstname" required placeholder="Enter First Name"><br><br>
+
+        <label for="lastname">Last Name</label><br>
+        <input type="text" id="lastname" name="lastname" required placeholder="Enter Last Name"><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required placeholder="Enter Email Address"><br><br> {# Changed type to email #}
+
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" required placeholder="Enter Password"><br><br> {# Changed name to password #}
+
+        <label for="password2">Confirm Password</label><br>
+        <input type="password" id="password2" name="password2" required placeholder="Confirm Password"><br><br> {# Changed name to password2 #}
+
+        <button type="submit">Sign-Up</button>
+        <br><br>
+         <p>Already have an account? <a href="/login">Login</a></p> {# Link to login #}
+    </form>
+</div>
+{% endblock %}

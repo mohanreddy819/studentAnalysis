@@ -1,0 +1,7 @@
+Flask
+selenium
+pandas
+lxml
+plotly
+openpyxl
+Werkzeug 
